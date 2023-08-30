@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Historico extends StatelessWidget{
-  const Historico({super.key});
+class Calendario extends StatelessWidget{
+  const Calendario({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
-       title : const Text("Historico"),
+       title : const Text("Calendario"),
       ),
-    body: Center(
+       body: Center(
         child: Column(
           children: [
-            Image(image: AssetImage('assets/historico.jpg')),
+            Image(image: AssetImage('assets/calendario.jpg')),
             ElevatedButton(
               child:const Text("Voltar"),
               onPressed: () {

@@ -68,12 +68,6 @@ class PaginaSecundaria extends StatelessWidget {
                    
                 },
               ),
-               ListTile(
-                title: const Text("Primeira Opção..."),
-                onTap:(){
-                    print("Primeiraopção escolhida");
-                },
-              ),
               ],
           ),
         ),
