@@ -12,7 +12,7 @@ class Calendario extends StatelessWidget{
        body: Center(
         child: Column(
           children: [
-            Image(image: AssetImage('assets/calendario.jpg')),
+            Image(image: AssetImage('assets/sargitario.jpg')),
             ElevatedButton(
               child:const Text("Voltar"),
               onPressed: () {

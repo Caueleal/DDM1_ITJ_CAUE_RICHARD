@@ -1,4 +1,6 @@
+import 'package:aula_17/Signos/Aqu%C3%A1rio.dart';
 import 'package:aula_17/calendario.dart';
+import 'package:aula_17/favorito.dart';
 import 'package:aula_17/historico.dart';
 import 'package:flutter/material.dart';
 import 'package:aula_17/TerceiraPagina.dart';
@@ -25,11 +27,12 @@ class MainApp extends StatelessWidget {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => PaginaSecundaria()));
           },
-        ),
-      ),
-    );
+        )
+      )
+      );
   }
 }
+
 
 class PaginaSecundaria extends StatelessWidget {
   const PaginaSecundaria({super.key});
@@ -39,6 +42,7 @@ class PaginaSecundaria extends StatelessWidget {
       appBar: AppBar( 
        title : const Text("Pagina 2"),
       ),
+      
         drawer: Drawer(
           child:ListView(
               padding: EdgeInsets.zero,
@@ -68,23 +72,40 @@ class PaginaSecundaria extends StatelessWidget {
                    
                 },
               ),
+               ListTile(
+                title: const Text("Favorito"),
+                onTap:(){
+                    print("Favorito");
+                  print('passei por aqui');
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Favorito()));
+                   
+                },
+              ),
+              
+              
               ],
           ),
         ),
       body: Center(
         child: Column(
-          children: [
-            Image(image: AssetImage('assets/dia1.png')),
-            ElevatedButton(
-              child:const Text("Voltar"),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-      ),
-    ),
-    );
-
+        children: [
+          ElevatedButton(
+                child:const Text("Voltar"),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ElevatedButton(
+                child:const Text("Proxima"),
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Aquario())); 
+                },
+              ),
+            ],
+          ),
+      ), 
+      );
   }
 }
