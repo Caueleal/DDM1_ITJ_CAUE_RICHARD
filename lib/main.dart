@@ -74,7 +74,7 @@ class PaginaSecundaria extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Image(image: AssetImage('assets/calendario.jpg')),
+            Image(image: AssetImage('assets/dia1.png')),
             ElevatedButton(
               child:const Text("Voltar"),
               onPressed: () {
